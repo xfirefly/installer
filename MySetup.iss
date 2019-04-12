@@ -27,7 +27,7 @@
 ;#define RegisteAssociations
 
 ;指定是否在安装时轮播图片
-#define ShowSlidePictures
+;#define ShowSlidePictures
 
 ;指定是否为绿色版安装程序（仅释放文件，不写入注册表条目，也不生成卸载程序）
 ;#define PortableBuild
@@ -41,7 +41,7 @@
 ;若想开启禁止安装旧版本的功能，此处版本号请注意一定要是
 ;点分十进制的正整数，除数字和英文半角句点以外不允许出现任何其他字符，
 ;否则程序无法判断版本的高低。
-#define MyAppVersion      str(EX_VERSION_MAJOR) + "." + str(EX_VERSION_MINOR) + "." + str(EX_VERSION_PATCH) + "." + str(EX_VERSION_BUILD)
+#define MyAppVersion      str(EX_VERSION_MAJOR) + "." + str(EX_VERSION_MINOR) + "." + str(EX_VERSION_PATCH)
 #define MyAppPublisher    str(EX_COMPANY_NAME_STR)
 #define MyAppPublisherURL str(EX_COMPANY_URL_STR)
 #define MyAppSupportURL   str(EX_SUPPORT_URL_STR)
@@ -58,12 +58,12 @@
 #ifdef _WIN64
   #define MyAppBinDir     AddBackslash(MyAppBaseBinDir) + "ex_x64"
   #define MyAppName       str(EX_APP_NAME_STR) + "(64-bit)"
-  #define MyAppExeName    "MyApp64.exe"
+  #define MyAppExeName    "wincast64.exe"
   #define MyAppSetupExe   MyAppName + "_" + MyAppVersion + "_x64"
 #else
   #define MyAppBinDir     AddBackslash(MyAppBaseBinDir) + "ex_x86"
   #define MyAppName       str(EX_APP_NAME_STR)
-  #define MyAppExeName    "MyApp.exe"
+  #define MyAppExeName    "wincast.exe"
   #define MyAppSetupExe   MyAppName + "_" + MyAppVersion + "_x86"
 #endif
 #ifdef PortableBuild
@@ -264,7 +264,7 @@ Source: ".\{tmp}\slides_picture_3.png";         DestDir: "{tmp}"; Flags: dontcop
 Source: ".\{tmp}\slides_picture_4.png";         DestDir: "{tmp}"; Flags: dontcopy solidbreak; Attribs: hidden system
 #endif
 ;包含待打包项目的所有文件及文件夹
-;Source: ".\{#MyAppBinDir}\*";                   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\{#MyAppBinDir}\*";                   DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 #ifndef PortableBuild
 #ifdef UseCustomUninstaller
 #if FileExists(".\{output}\Uninstall.exe")
@@ -300,10 +300,17 @@ Filename: "{app}\Uninstall.ini"; Section: "General"; Key: "File";    String: "Un
 ;Root: HKLM; Subkey: "Software\My Company\My Program"; Flags: uninsdeletekey
 ;Root: HKLM; Subkey: "Software\My Company\My Program\Settings"; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}"
 
+[Tasks]
+Name: StartAfterInstall; Description: Run application after install
+[Run]
+Filename: {app}\wincast.exe; Flags: shellexec skipifsilent nowait; Tasks: StartAfterInstall
+
 ;若有创建快捷方式的需要，请取消此区段的注释并自行添加相关脚本
-;[Icons]
-;Name: "{group}\My Program"; Filename: "{app}\MYPROG.EXE"; Parameters: "/play filename.mid"; WorkingDir: "{app}"; Comment: "This is my program"; IconFilename: "{app}\myicon.ico"
+[Icons]
+;Name: "{group}\蓝莓投屏"; Filename: "{app}\wincast.exe"; Parameters: "/play filename.mid"; WorkingDir: "{app}"; Comment: "This is my program"; IconFilename: "{app}\myicon.ico"
 ;Name: "{group}\Documents"; Filename: "{app}\Doc"; Flags: foldershortcut
+Name: "{group}\蓝莓投屏"; Filename: "{app}\wincast.exe";  WorkingDir: "{app}"; IconFilename: "{app}\app.ico"; Comment: "蓝莓投屏"
+Name: "{commondesktop}\蓝莓投屏"; Filename: {app}\wincast.exe; WorkingDir: {app}; IconFilename: {app}\app.ico; Comment: "蓝莓投屏" 
 
 ;#ifdef RegisteAssociations
 ;[UninstallRun]
