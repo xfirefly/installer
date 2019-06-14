@@ -309,8 +309,8 @@ Filename: {app}\wincast.exe; Flags: shellexec skipifsilent nowait; Tasks: StartA
 [Icons]
 ;Name: "{group}\蓝莓投屏"; Filename: "{app}\wincast.exe"; Parameters: "/play filename.mid"; WorkingDir: "{app}"; Comment: "This is my program"; IconFilename: "{app}\myicon.ico"
 ;Name: "{group}\Documents"; Filename: "{app}\Doc"; Flags: foldershortcut
-Name: "{group}\蓝莓投屏"; Filename: "{app}\wincast.exe";  WorkingDir: "{app}"; IconFilename: "{app}\app.ico"; Comment: "蓝莓投屏"
-Name: "{commondesktop}\蓝莓投屏"; Filename: {app}\wincast.exe; WorkingDir: {app}; IconFilename: {app}\app.ico; Comment: "蓝莓投屏" 
+Name: "{group}\AirCast"; Filename: "{app}\wincast.exe";  WorkingDir: "{app}"; IconFilename: "{app}\app.ico"; Comment: "AirCast投屏"
+Name: "{commondesktop}\AirCast"; Filename: {app}\wincast.exe; WorkingDir: {app}; IconFilename: {app}\app.ico; Comment: "AirCast投屏" 
 
 ;#ifdef RegisteAssociations
 ;[UninstallRun]
