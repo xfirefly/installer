@@ -746,7 +746,7 @@ end;
 procedure CancelButtonClick(CurPageID : integer; var Cancel, Confirm: boolean);
 begin
   Confirm := False;
-  messagebox_close.Center();
+  //messagebox_close.Center();
   messagebox_close.ShowModal();
   if can_exit_setup then
   begin

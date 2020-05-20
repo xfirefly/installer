@@ -16,13 +16,13 @@
 #endif
 #endif
 
-#define EX_VERSION_MAJOR 2
-#define EX_VERSION_MINOR 2
-#define EX_VERSION_PATCH 2
+#define EX_VERSION_MAJOR 4
+#define EX_VERSION_MINOR 0
+#define EX_VERSION_PATCH 0
  
 #ifndef ISPP_INVOKED
 #define EX_VERSION_NUM          EX_VERSION_MAJOR,EX_VERSION_MINOR,EX_VERSION_PATCH
-#define EX_VERSION_STR          _T("2.2.2")
+#define EX_VERSION_STR          _T("4.0.0")
 #endif
 
 #define EX_APP_ID_32_STR        _T("{BC3D821C-7EFA-41F8-B1C2-8A55DDFE5A67}")
@@ -32,13 +32,13 @@
 #define EX_APP_MUTEX_32_STR     EX_APP_ID_32_STR
 #define EX_APP_MUTEX_64_STR     EX_APP_ID_64_STR
 #define EX_COMPANY_NAME_STR     _T("Blueberry")
-#define EX_COMPANY_URL_STR      _T("http://www.blueberry-tek.com/")
+#define EX_COMPANY_URL_STR      _T("http://deeprd.com/")
 #define EX_SUPPORT_URL_STR      EX_COMPANY_URL_STR
 #define EX_UPDATE_URL_STR       EX_COMPANY_URL_STR
 #define EX_CONTACT_STR          EX_COMPANY_NAME_STR
 #define EX_SUPPORT_PHONE_STR    _T("17722630259")
-#define EX_README_URL_STR       _T("http://www.blueberry-tek.com/")
-#define EX_LICENSE_URL_STR      _T("http://www.blueberry-tek.com/")
+#define EX_README_URL_STR       _T("http://deeprd.com/")
+#define EX_LICENSE_URL_STR      _T("http://deeprd.com/")
 #define EX_COMMENTS_STR         _T("Comments")
 #define EX_COPYRIGHT_STR        _T("Unlicense.")
 

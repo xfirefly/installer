@@ -21,7 +21,7 @@
 #include ".\version.h"
 
 ;指定是否只能在 Windows 7 SP1 及更新版本的操作系统上安装
-;#define Windows7AndNewer
+#define Windows7AndNewer
 
 ;指定是否要注册相关后缀名
 ;#define RegisteAssociations
@@ -33,7 +33,7 @@
 ;#define PortableBuild
 
 ;指定是否只能安装新版本，而不能用旧版本覆盖新版本
-#define OnlyInstallNewVersion
+;#define OnlyInstallNewVersion
 
 ;指定是否使用自定义卸载程序
 ;#define UseCustomUninstaller
