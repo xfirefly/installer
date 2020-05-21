@@ -20,6 +20,7 @@
 
 #include ".\version.h"
 
+#define ShowSlidePictures
 ;指定是否只能在 Windows 7 SP1 及更新版本的操作系统上安装
 #define Windows7AndNewer
 
@@ -309,8 +310,8 @@ Filename: {app}\wincast.exe; Flags: shellexec skipifsilent nowait; Tasks: StartA
 [Icons]
 ;Name: "{group}\蓝莓投屏"; Filename: "{app}\wincast.exe"; Parameters: "/play filename.mid"; WorkingDir: "{app}"; Comment: "This is my program"; IconFilename: "{app}\myicon.ico"
 ;Name: "{group}\Documents"; Filename: "{app}\Doc"; Flags: foldershortcut
-Name: "{group}\AirCast"; Filename: "{app}\wincast.exe";  WorkingDir: "{app}"; IconFilename: "{app}\app.ico"; Comment: "AirCast投屏"
-Name: "{commondesktop}\AirCast"; Filename: {app}\wincast.exe; WorkingDir: {app}; IconFilename: {app}\app.ico; Comment: "AirCast投屏" 
+Name: "{group}\投屏大师"; Filename: "{app}\wincast.exe";  WorkingDir: "{app}"; Comment: "投屏大师"
+Name: "{commondesktop}\投屏大师"; Filename: {app}\wincast.exe; WorkingDir: {app}; Comment: "投屏大师" 
 
 ;#ifdef RegisteAssociations
 ;[UninstallRun]

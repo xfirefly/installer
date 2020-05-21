@@ -27,18 +27,18 @@
 
 #define EX_APP_ID_32_STR        _T("{BC3D821C-7EFA-41F8-B1C2-8A55DDFE5A67}")
 #define EX_APP_ID_64_STR        _T("{B74B8C7D-C21A-41B1-B419-9D63B484EEF4}")
-#define EX_APP_NAME_STR         _T("AirCast")
-#define EX_APP_DISPLAY_NAME_STR _T("AirCast")
+#define EX_APP_NAME_STR         _T("CastMaster")
+#define EX_APP_DISPLAY_NAME_STR _T("投屏大师")
 #define EX_APP_MUTEX_32_STR     EX_APP_ID_32_STR
 #define EX_APP_MUTEX_64_STR     EX_APP_ID_64_STR
-#define EX_COMPANY_NAME_STR     _T("Blueberry")
-#define EX_COMPANY_URL_STR      _T("http://deeprd.com/")
+#define EX_COMPANY_NAME_STR     _T("HudunTech")
+#define EX_COMPANY_URL_STR      _T("http://HudunTech.com/")
 #define EX_SUPPORT_URL_STR      EX_COMPANY_URL_STR
 #define EX_UPDATE_URL_STR       EX_COMPANY_URL_STR
 #define EX_CONTACT_STR          EX_COMPANY_NAME_STR
 #define EX_SUPPORT_PHONE_STR    _T("17722630259")
-#define EX_README_URL_STR       _T("http://deeprd.com/")
-#define EX_LICENSE_URL_STR      _T("http://deeprd.com/")
+#define EX_README_URL_STR       _T("http://HudunTech.com/")
+#define EX_LICENSE_URL_STR      _T("http://HudunTech.com/")
 #define EX_COMMENTS_STR         _T("Comments")
 #define EX_COPYRIGHT_STR        _T("Unlicense.")
 
